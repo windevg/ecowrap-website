@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Wrap Innovation - Sustainable Honeycomb Packaging Solutions</title>
+    <meta name="description" content="Leading manufacturer of eco-friendly honeycomb packaging solutions for e-commerce, industrial, and sustainable brands. 100% recyclable, carbon-neutral certified.">
+    <meta name="theme-color" content="#2C5E3F">
+    <style>
+        :root {
+            --color-forest-green: #2C5E3F;
+            --color-amber: #D7A449;
+            --color-kraft-beige: #E9E2D0;
+            --color-charcoal: #2A2A2A;
+            --color-leaf-green: #76A866;
+            --color-white: #FFFFFF;
+            --color-text: #1a1a1a;
+            --color-text-light: #666666;
+            --color-border: #e0e0e0;
+            --color-success: #76A866;
+            --color-error: #d32f2f;
+            
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', 'Segoe UI', sans-serif;
+            --font-mono: 'Courier New', monospace;
+            
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            line-height: 1.6;
+            background: var(--color-white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            transition: all var(--transition-normal);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-forest-green);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .logo:hover {
+            color: var(--color-amber);
+        }
+
+        .hex-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--color-forest-green), var(--color-leaf-green));
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-forest-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-amber);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--color-forest-green);
+            color: var(--color-white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+        }
+
+        .cta-button:hover {
+            background: var(--color-amber);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(44, 94, 63, 0.2);
+        }
+
+        .cta-button.outline {
+            background: transparent;
+            border: 2px solid var(--color-forest-green);
+            color: var(--color-forest-green);
+        }
+
+        .cta-button.outline:hover {
+            background: var(--color-forest-green);
+            color: var(--color-white);
+        }
+
+        .nav-cta-button {
+            padding: 0.55rem 1.2rem;
+            font-size: 0.85rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f5f5f5 0%, var(--color-kraft-beige) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--color-leaf-green) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            color: var(--color-forest-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .honeycomb-visual {
+            width: 300px;
+            height: 300px;
+            background: var(--color-white);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(44, 94, 63, 0.15);
+            animation: fadeInRight 0.8s ease 0.3s both;
+        }
+
+        .honeycomb-grid {
+            font-size: 3rem;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Value Proposition */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .prop-card {
+            background: var(--color-white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            text-align: center;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-amber);
+        }
+
+        .prop-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .prop-card h3 {
+            color: var(--color-forest-green);
+            margin-bottom: 0.8rem;
+        }
+
+        /* About Section */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: var(--color-forest-green);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--color-leaf-green), var(--color-forest-green));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow: 0 20px 60px rgba(44, 94, 63, 0.15);
+        }
+
+        .about-text h2 {
+            color: var(--color-forest-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .mission {
+            background: var(--color-kraft-beige);
+            padding: 1.5rem;
+            border-left: 4px solid var(--color-amber);
+            margin-top: 2rem;
+            border-radius: 8px;
+            font-style: italic;
+            color: var(--color-charcoal);
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            transition: all var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+            border-color: var(--color-amber);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--color-kraft-beige), #d4c4b0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .product-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-content h3 {
+            color: var(--color-forest-green);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .product-content p {
+            flex: 1;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .product-features {
+            background: var(--color-kraft-beige);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .product-features ul {
+            list-style: none;
+        }
+
+        .product-features li {
+            padding: 0.3rem 0;
+            color: var(--color-text);
+        }
+
+        .product-features li::before {
+            content: '✓ ';
+            color: var(--color-success);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .learn-more-btn {
+            background: var(--color-forest-green);
+            color: var(--color-white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            align-self: flex-start;
+        }
+
+        .learn-more-btn:hover {
+            background: var(--color-amber);
+            transform: translateX(4px);
+        }
+
+        /* Technology Section */
+        .tech-section {
+            background: linear-gradient(135deg, var(--color-forest-green), var(--color-leaf-green));
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 50%;
+        }
+
+        .tech-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-section h2 {
+            color: var(--color-white);
+        }
+
+        .tech-section p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-normal);
+        }
+
+        .tech-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .tech-card h4 {
+            color: var(--color-amber);
+            margin-bottom: 1rem;
+        }
+
+        /* Industries Section */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .industry-card {
+            background: var(--color-kraft-beige);
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all var(--transition-normal);
+            border: 2px solid transparent;
+        }
+
+        .industry-card:hover {
+            background: var(--color-white);
+            border-color: var(--color-amber);
+            transform: scale(1.05);
+        }
+
+        .industry-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+
+        .industry-card h4 {
+            color: var(--color-forest-green);
+            font-size: 1rem;
+        }
+
+        /* Sustainability Section */
+        .sustainability {
+            background: var(--color-kraft-beige);
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pillar {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-forest-green);
+            transition: all var(--transition-normal);
+        }
+
+        .pillar:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .pillar h4 {
+            color: var(--color-forest-green);
+            margin-bottom: 0.8rem;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .cert-badge {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--color-forest-green);
+            font-weight: 600;
+            color: var(--color-forest-green);
+        }
+
+        /* Manufacturing Section */
+        .manufacturing {
+            background: var(--color-white);
+        }
+
+        .manufacturing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .manufacturing-image {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #b8956f, #8b7355);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .manufacturing-points {
+            list-style: none;
+        }
+
+        .manufacturing-points li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        .manufacturing-points li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--color-amber);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--color-forest-green), var(--color-leaf-green));
+            color: var(--color-white);
+            padding: 5rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info h2 {
+            color: var(--color-white);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .contact-item p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-white);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-amber);
+            box-shadow: 0 0 0 3px rgba(215, 164, 73, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-amber);
+            color: var(--color-charcoal);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-body);
+        }
+
+        .submit-btn:hover {
+            background: #f0b754;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(215, 164, 73, 0.3);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .form-message.success {
+            display: block;
+            background: rgba(118, 168, 102, 0.2);
+            border: 1px solid var(--color-success);
+            color: var(--color-white);
+        }
+
+        .form-message.error {
+            display: block;
+            background: rgba(211, 47, 47, 0.2);
+            border: 1px solid var(--color-error);
+            color: #ff6b6b;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-charcoal);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--color-amber);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            background: var(--color-amber);
+            color: var(--color-charcoal);
+            transform: translateY(-3px);
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--color-white); border-bottom: 1px solid var(--color-border); flex-direction: column; gap: 1rem; padding: 1.5rem; }
+            
+            nav { padding: 0.75rem 1.5rem; }
+            .logo img { height: 50px !important; max-width: 250px !important; }
+            
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            
+            .hero-content { grid-template-columns: 1fr; }
+            .hero-visual { margin-top: 2rem; }
+            .honeycomb-visual { width: 250px; height: 250px; }
+            
+            .about-container { grid-template-columns: 1fr; }
+            .about-image { height: 300px; }
+            
+            .manufacturing-grid { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; }
+            
+            .product-card { margin-bottom: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            nav { padding: 0.75rem 1rem; }
+            .hero { min-height: auto; padding: 2rem 1rem; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            .section { padding: 3rem 1rem; }
+            
+            .hero-ctas { flex-direction: column; }
+            .cta-button { width: 100%; text-align: center; }
+            
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        /* Loading Skeleton */
+        .skeleton {
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        @keyframes skeleton-loading {
+            0% { background-color: #f0f0f0; }
+            100% { background-color: #e0e0e0; }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3a478c82-cba0-46e5-b85f-127a500037fc" alt="Eco Wrap Innovation Logo" style="height: 65px; width: auto; max-width: 320px; object-fit: contain;">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+		<p style="color: #2C5E3F; line-height: 0.5; font-size: 40px; font-weight: bold;">Sustainable Packaging.</p>
+		<p style="color: #2C5E3F; line-height: 0.5; font-size: 40px; font-weight: bold;">Unmatched Protection.</p>
+		<p style="color: #2C5E3F; line-height: 0.5; font-size: 40px; font-weight: bold;">Zero Waste.</p>
+                <p>Eco Wrap Innovation is a leading manufacturer and trader of high-performance honeycomb packaging engineered for a cleaner, greener future.</p>
+                <div class="hero-ctas">
+                    <button class="cta-button" onclick="scrollToContact()">Request a Quote</button>
+                    <button class="cta-button outline" onclick="scrollToSection('products')">Explore Products</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="honeycomb-visual" style="width: 400px; height: 400px;">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/cc9977e0-5ee6-4893-83f5-7b3891e758d3" alt="Eco Wrap Innovation Packaging Solutions" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="prop-card" onclick="this.style.transform='scale(1.05)'">
+            <div class="prop-icon">♻️</div>
+            <h3>100% Recyclable</h3>
+            <p>Eco-friendly materials that return to the earth, reducing waste and environmental impact.</p>
+        </div>
+        <div class="prop-card">
+            <div class="prop-icon">💪</div>
+            <h3>High Shock Absorption</h3>
+            <p>Superior protection for fragile items with distributed impact absorption technology.</p>
+        </div>
+        <div class="prop-card">
+            <div class="prop-icon">⚙️</div>
+            <h3>Premium Engineering</h3>
+            <p>Advanced manufacturing excellence delivering consistent, reliable performance.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <h2 class="section-title">Who We Are</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ab2d88d9-51c2-43a0-87e9-56d9dce9c38e" alt="Redefining Protective Packaging" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+            </div>
+            <div class="about-text">
+                <h2>Redefining Protective Packaging</h2>
+                <p>Eco Wrap Innovation is redefining protective packaging with sustainable honeycomb solutions designed to replace plastic, foam, and bubble wrap. Our advanced manufacturing process ensures exceptional durability, shock absorption, and environmental responsibility — all in one lightweight design.</p>
+                <p>With over a decade of expertise in sustainable packaging, we've partnered with leading global brands to deliver solutions that protect products without compromising our planet's future.</p>
+                <div class="mission">
+                    <strong>Our Mission:</strong> To deliver packaging that safeguards products and the planet, through continuous innovation and eco-centered engineering.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <h2 class="section-title">Our Honeycomb Packaging Solutions</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/20a9fece-ab28-4f5b-8862-43e8532c2d1b" alt="Honeycomb Paper Sheets & Rolls" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Honeycomb Paper Sheets & Rolls</h3>
+                    <p>Expandable kraft paper honeycomb wrap available in sheets and rolls. Perfect for wrapping, cushioning, and void fill applications.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li>Multiple widths and lengths</li>
+                            <li>Expands up to 40x original size</li>
+                            <li>Natural kraft paper color</li>
+                            <li>Food-safe and non-toxic</li>
+                        </ul>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6e5f5595-f142-4d52-8f91-3ab9f96d1462" alt="Honeycomb Cardboard Panels" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Honeycomb Cardboard Panels</h3>
+                    <p>Rigid, lightweight structural panels with exceptional strength-to-weight ratio. Ideal for protective inserts and dividers.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li>Various thicknesses </li>
+                            <li>Customizable dimensions</li>
+                            <li>High compression strength</li>
+                            <li>Easy to cut and shape</li>
+                        </ul>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/51866201-cb2a-4210-84f7-82344d07f812" alt="Honeycomb Edge Protectors" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Honeycomb Edge Protectors</h3>
+                    <p>L-shaped and U-shaped corner guards providing superior edge protection during shipping and handling.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li>L-shape and U-shape profiles</li>
+                            <li>Various lengths and thicknesses</li>
+                            <li>Stackable and recyclable</li>
+                            <li>Reusable for multiple shipments</li>
+                        </ul>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/a348b2f0-68c8-49bc-b904-d8b9ddd33492" alt="Honeycomb Pallets" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Honeycomb Pallets</h3>
+                    <p>Eco-friendly alternative to wooden pallets. Lightweight, hygienic, and fully recyclable.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li>80% lighter than wood pallets</li>
+                            <li>No splinters, nails, or pests</li>
+                            <li>ISPM-15 exempt</li>
+                            <li>Up to 2000kg capacity</li>
+                        </ul>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/54b9c69e-d326-4bf1-b4ca-73f1b59da7b3" alt="Custom Honeycomb Packaging Solutions" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Custom Honeycomb Solutions</h3>
+                    <p>Bespoke protective packaging engineered to your exact specifications and unique needs.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li>Custom CAD design services</li>
+                            <li>Rapid prototyping</li>
+                            <li>Die-cutting capabilities</li>
+                            <li>Engineering support</li>
+                        </ul>
+                    </div>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-props" style="margin-top: 4rem;">
+            <div class="prop-card">
+                <div class="prop-icon">♻️</div>
+                <h3>100% Recyclable</h3>
+                <p>Biodegradable materials</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">💪</div>
+                <h3>High Performance</h3>
+                <p>Superior strength-to-weight ratio</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">💰</div>
+                <h3>Cost Effective</h3>
+                <p>Space efficient solutions</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">🌲</div>
+                <h3>Responsibly Sourced</h3>
+                <p>Sustainable materials</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section tech-section" id="technology">
+        <div class="tech-content">
+            <h2 class="section-title" style="color: white; margin-bottom: 1rem;">The Power of Honeycomb Engineering</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Inspired by nature, our hexagonal honeycomb structure provides superior protection through distributed impact absorption. Lightweight, strong, and eco-friendly — the perfect combination for modern packaging needs.</p>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>🛡️ Distributed Impact Absorption</h4>
+                    <p>Hexagonal cells spread force evenly across the entire structure, minimizing damage to contents.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>⚖️ Lightweight Champion</h4>
+                    <p>95% air by volume, our honeycomb solutions reduce shipping costs without compromising strength.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>🔄 Adaptive Protection</h4>
+                    <p>Expands to fit any shape, conforming perfectly to your products while maximizing efficiency.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>♻️ Fully Sustainable</h4>
+                    <p>Biodegradable paper construction means zero environmental guilt and complete recyclability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section" id="industries">
+        <h2 class="section-title">Trusted Across Multiple Sectors</h2>
+        <div class="industries-grid">
+            <div class="industry-card">
+                <div class="industry-icon">🛒</div>
+                <h4>E-commerce & Retail</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">🪑</div>
+                <h4>Furniture & Home</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">💻</div>
+                <h4>Electronics & Appliances</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">🍷</div>
+                <h4>Glassware & Ceramics</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">🚗</div>
+                <h4>Automotive & Industrial</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">🚚</div>
+                <h4>Logistics & Fulfillment</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">🎨</div>
+                <h4>Art & Collectibles</h4>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">⚕️</div>
+                <h4>Medical & Pharma</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="section sustainability" id="sustainability">
+        <h2 class="section-title">Built on Responsibility</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">We believe protecting products shouldn't come at the expense of the environment. Eco Wrap Innovation is committed to:</p>
+        
+        <div class="pillars">
+            <div class="pillar">
+                <h4>♻️ Recycled & Renewable Fibers</h4>
+                <p>100% post-consumer recycled paper combined with responsibly sourced virgin fibers.</p>
+            </div>
+            <div class="pillar">
+                <h4>🚫 Zero Plastic</h4>
+                <p>Eliminating plastic from protective packaging entirely—zero plastic, zero guilt.</p>
+            </div>
+            <div class="pillar">
+                <h4>🔄 Circular Systems</h4>
+                <p>Designed for reuse and recyclability, supporting a circular packaging economy.</p>
+            </div>
+        </div>
+
+        </section>
+
+    <!-- Manufacturing Section -->
+    <section class="section manufacturing">
+        <h2 class="section-title">Precision. Quality. Innovation.</h2>
+        <div class="manufacturing-grid">
+            <div class="manufacturing-image">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/13fd1e30-953d-4a38-a13b-b434308d01b7" alt="Precision. Quality. Innovation." style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+            </div>
+            <div>
+                <p>Our state-of-the-art facility uses advanced machinery and strict quality control to ensure consistency, reliability, and premium performance in every roll and pad produced.</p>
+                <ul class="manufacturing-points">
+                    <li><strong>Advanced Automated Machinery</strong> - Precision equipment for consistent output</li>
+                    <li><strong>Multi-Stage Quality Inspection</strong> - Every product meets rigorous standards</li>
+                    <li><strong>Custom Engineering</strong> - Tailored solutions for unique needs</li>
+                    <li><strong>Scalable Production</strong> - From small batches to high-volume orders</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Build a Greener Packaging Future</h2>
+                <p1>Whether you need custom solutions or want to switch to sustainable protection, our team is here to help.</p1>
+                
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div>
+                        <p><strong>Email</strong></p>
+                        <p>ecowrapinnovation@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div>
+                        <p><strong>Phone</strong></p>
+                        <p>+91 7821882177</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div>
+                        <p><strong>Address</strong></p>
+                        <p>Vasai,Mumbai,Maharashtra,India</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">🕐</div>
+                    <div>
+                        <p><strong>Hours</strong></p>
+                        <p>Monday-Saturday, 9AM-6PM IST</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="product">Product Interest *</label>
+                    <select id="product" name="product" required>
+                        <option value="">Select a product</option>
+                        <option value="wrap-rolls">Wrap Rolls</option>
+                        <option value="cardboard-panels">Cardboard Panels</option>
+                        <option value="edge-protectors">Edge Protectors</option>
+                        <option value="pallets">Pallets</option>
+                        <option value="custom">Custom Solutions</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request a Quote</button>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3a478c82-cba0-46e5-b85f-127a500037fc" alt="Eco Wrap Innovation Logo" style="height: 80px; width: auto;">
+                </div>
+                <p>Leading manufacturer and trader of sustainable honeycomb packaging solutions for a cleaner future.</p>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="Instagram">📷</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#products">Paper Wrap Rolls</a></li>
+                    <li><a href="#products">Cardboard Panels</a></li>
+                    <li><a href="#products">Edge Protectors</a></li>
+                    <li><a href="#products">Pallets</a></li>
+                    <li><a href="#products">Custom Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#sustainability">Sustainability</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Request Quote</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Eco Wrap Innovation. All rights reserved.</p>
+            <p>Sustainable packaging for a better tomorrow 🌍</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll functions
+        function scrollToContact() {
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                product: document.getElementById('product').value,
+                message: document.getElementById('message').value
+            };
+
+            // Simulate form submission
+            formMessage.classList.remove('success', 'error');
+            formMessage.textContent = 'Sending...';
+            formMessage.style.display = 'block';
+
+            setTimeout(() => {
+                formMessage.classList.add('success');
+                formMessage.textContent = '✓ Quote request submitted successfully! We\'ll be in touch within 24 hours.';
+                
+                // Reset form
+                setTimeout(() => {
+                    this.reset();
+                    formMessage.style.display = 'none';
+                }, 3000);
+            }, 800);
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card, .pillar, .industry-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Learn More buttons
+        document.querySelectorAll('.learn-more-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                scrollToContact();
+            });
+        });
+
+        // Analytics placeholder
+        console.log('Eco Wrap Innovation Website Loaded');
+        console.log('Track conversions: Quote requests, product views, scroll depth');
+    </script>
+</body>
+</html>
